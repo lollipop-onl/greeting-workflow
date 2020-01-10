@@ -1,0 +1,17 @@
+# ワークフローの名前
+name: 挨拶
+# ワークフローのトリガーイベント
+on: push
+
+# ジョブの定義
+jobs:
+  greeting:
+    # ジョブの名前
+    name: 挨拶
+    # ランナーの指定
+    runs-on: ubuntu-latest
+    # ステップの定義
+    steps:
+      # 標準出力を実行するステップ
+      - name: Pushしたユーザーに挨拶する
+        run: echo Hello $GITHUB_ACTOR !
